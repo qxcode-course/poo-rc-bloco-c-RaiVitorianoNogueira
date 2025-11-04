@@ -9,6 +9,8 @@
 
 ## Competências básicas de manipulação de dados
 
+
+
 Você pode testar utilizando um array de inteiros ou um array de objetos.
 
 - Criar um array vazio
