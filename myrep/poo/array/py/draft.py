@@ -23,3 +23,8 @@ print(lista_p)
 
 print(lista_vazia)
 
+
+
+
+
+
