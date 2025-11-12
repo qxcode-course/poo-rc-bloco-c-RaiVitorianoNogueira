@@ -24,6 +24,29 @@ print(lista_p)
 print(lista_vazia)
 
 
+nova_lista = [ "maça", "banana", " pera", "abacate", "uva"]
+
+formatada = "    " .join(nova_lista)
+
+print(formatada)
+
+
+
+for fruta in nova_lista:
+    print(fruta)
+
+
+a = [1,2,3,4,5,6,7]
+destruir = a.remove(1)
+
+print(destruir)
+
+
+
+
+
+
+
 
 
 
