@@ -92,8 +92,58 @@
         },
         {
             "label": "2025-11-12_14-57-19",
-            "content": "class Cliente:\n    def __init__(self, nome: str):\n        self.__nome: str\n\n\n\n    def getNome(self,):\n        return self.__nome\n    \n\n    def __str__(self):\n        return self.__nome\n    \n\n\n\n\n\nclass Market:\n    def __init__(self, caixas: int):\n        self.counters: list[Cliente|None]  = []\n        self.wait: list[Cliente] = []\n        for _ in range(caixas):\n            self.counters.append(None)\n\n    \n\n    def __str__(self):\n        caixas = \", \".join([str(cliente) if cliente else \"-----\" for  cliente in self.counters])\n        espera = \", \".join([str(cliente) for cliente in self.wait])\n\n        return f\"Caixas: [{caixas}]\\nEspera: [{espera}]\"\n    \n    \n\n    def arrive(self, cliente:Cliente):\n        self.wait.append(cliente)\n\n\n\n    def call(self, posicao: int):\n        if self.counters[posicao] != None:\n            print(\"fail: caixa ocupado\")\n        \n        elif not self.wait:\n            print(\"fail:sem clientes\") \n        else:\n            self.counters[posicao] = self.wait.pop(0)\n\n        \n\n\n    def enter(self,cliente:Cliente):\n        self.wait.append(cliente)\n\n\n\n    def finish(self, posicao:int):\n        if not 0  <= posicao < len(self.counters):\n            print(\"fail: caixa inexistente\")\n\n        elif not self.counters[posicao]:\n            print(\"fail:caixa vazio\")\n\n\n\n        else:\n            self.counters.pop(posicao)\n\n        \n\n\n\n\n\n\n\n\ndef main():\n    market = Market(0)\n\n    while True:\n        line = input()\n\n        args = line.split()\n        print(\"$\" + line)\n\n        if args[0] == \"init\":\n            market = Market(int(args[1]))\n            \n        if args[0] == \"show\":\n            print(market)\n\n        elif args[0] == \"enter\":\n            market.enter(Cliente(args[1]))\n            \n\n        elif args[0] == \"call\":\n            market.call(int(args[1]))\n            \n\n        elif args[0] == \"end\":\n            break\n\n    \n\n\nmain()",
+            "content": "@@ -730,28 +730,24 @@\n d(cliente)%0A%0A\n-    \n %0A%0A    def ca\n@@ -1081,17 +1081,16 @@\n cliente)\n- \n %0A%0A%0A%0A    \n",
             "lines": "108"
+        },
+        {
+            "label": "2025-11-15_02-18-30",
+            "content": "@@ -1061,32 +1061,28 @@\n        self.\n-counters\n+wait\n .append(clie\n",
+            "lines": "108"
+        },
+        {
+            "label": "2025-11-15_02-22-44",
+            "content": "@@ -1002,29 +1002,16 @@\n t.pop(0)\n-%0A            \n %0A%0A      \n@@ -1057,36 +1057,40 @@\n ):%0A        self.\n-wait\n+counters\n .append(cliente)\n@@ -1287,25 +1287,24 @@\n print(%22fail:\n- \n caixa vazio%22\n",
+            "lines": "108"
+        },
+        {
+            "label": "2025-11-15_02-29-12",
+            "content": "@@ -736,38 +736,8 @@\n nte)\n- and self.nome.append(cliente)\n %0A%0A  \n",
+            "lines": "109"
+        },
+        {
+            "label": "2025-11-15_02-31-16",
+            "content": "@@ -732,16 +732,46 @@\n cliente)\n+ and self.nome.append(cliente)\n %0A%0A    %0A%0A\n@@ -1856,36 +1856,8 @@\n %5D))%0A\n-            self.counters%5B%5D%0A\n     \n",
+            "lines": "109"
+        },
+        {
+            "label": "2025-11-15_02-32-46",
+            "content": "@@ -1826,32 +1826,47 @@\n %5D))%0A            \n+self.counters%5B%5D\n %0A            %0A%0A \n",
+            "lines": "110"
+        },
+        {
+            "label": "2025-11-15_02-33-04",
+            "content": "@@ -703,31 +703,24 @@\n e):%0A        \n-return \n self.wait.ap\n",
+            "lines": "110"
+        },
+        {
+            "label": "2025-11-15_02-39-05",
+            "content": "@@ -696,27 +696,16 @@\n :Cliente\n-, nome: str\n ):%0A     \n@@ -699,32 +699,39 @@\n iente):%0A        \n+return \n self.wait.append\n@@ -742,19 +742,8 @@\n ente\n-(str%5Bnome%5D)\n )%0A%0A \n",
+            "lines": "110"
+        },
+        {
+            "label": "2025-11-15_02-44-58",
+            "content": "@@ -746,24 +746,20 @@\n ente\n-)%0A        return\n+(str%5Bnome%5D))\n %0A%0A  \n",
+            "lines": "110"
+        },
+        {
+            "label": "2025-11-15_02-45-52",
+            "content": "@@ -697,16 +697,26 @@\n Cliente,\n+ nome: str\n ):%0A     \n@@ -748,24 +748,30 @@\n te)%0A        \n+return\n %0A%0A    %0A%0A    \n@@ -1100,32 +1100,28 @@\n        self.\n-counters\n+wait\n .append(clie\n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-15_02-50-53",
+            "content": "class Cliente:\n    def __init__(self, nome: str):\n        self.__nome: str\n\n\n\n    def getNome(self,):\n        return self.__nome\n    \n\n    def __str__(self):\n        return self.__nome\n    \n\n\n\n\n\nclass Market:\n    def __init__(self, caixas: int):\n        self.counters: list[Cliente|None]  = []\n        self.wait: list[Cliente] = []\n        for _ in range(caixas):\n            self.counters.append(None)\n\n    \n\n    def __str__(self):\n        caixas = \", \".join([str(cliente) if cliente else \"-----\" for  cliente in self.counters])\n        espera = \", \".join([str(cliente) for cliente in self.wait])\n\n        return f\"Caixas: [{caixas}]\\nEspera: [{espera}]\"\n    \n    \n\n    def arrive(self, cliente:Cliente,):\n        self.wait.append(cliente)\n        \n\n    \n\n    def call(self, posicao: int):\n        if self.counters[posicao] != None:\n            print(\"fail: caixa ocupado\")\n        \n        elif not self.wait:\n            print(\"fail:sem clientes\") \n        else:\n            self.counters[posicao] = self.wait.pop(0)\n            \n\n        \n\n\n    def enter(self,cliente:Cliente):\n        self.counters.append(cliente) \n\n\n\n    def finish(self, posicao:int):\n        if not 0  <= posicao < len(self.counters):\n            print(\"fail: caixa inexistente\")\n\n        elif not self.counters[posicao]:\n            print(\"fail: caixa vazio\")\n\n\n\n        else:\n            self.counters.pop(posicao)\n\n        \n\n\n\n\n\n\n\n\ndef main():\n    market = Market(0)\n\n    while True:\n        line = input()\n\n        args = line.split()\n        print(\"$\" + line)\n\n        if args[0] == \"init\":\n            market = Market(int(args[1]))\n            \n        if args[0] == \"show\":\n            print(market)\n\n        elif args[0] == \"enter\":\n            market.enter(Cliente(args[1]))\n            \n\n        elif args[0] == \"call\":\n            market.call(int(args[1]))\n            \n            \n\n        elif args[0] == \"end\":\n            break\n\n    \n\n\nmain()",
+            "lines": "111"
         }
     ]
 }

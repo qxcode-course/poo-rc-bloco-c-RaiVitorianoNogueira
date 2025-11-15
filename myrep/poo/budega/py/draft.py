@@ -33,10 +33,11 @@ class Market:
     
     
 
-    def arrive(self, cliente:Cliente):
+    def arrive(self, cliente:Cliente,):
         self.wait.append(cliente)
+        
 
-
+    
 
     def call(self, posicao: int):
         if self.counters[posicao] != None:
@@ -46,12 +47,14 @@ class Market:
             print("fail:sem clientes") 
         else:
             self.counters[posicao] = self.wait.pop(0)
+            
 
         
 
 
     def enter(self,cliente:Cliente):
-        self.wait.append(cliente)
+        self.counters.append(cliente) 
+        print(self.counters)
 
 
 
@@ -60,7 +63,7 @@ class Market:
             print("fail: caixa inexistente")
 
         elif not self.counters[posicao]:
-            print("fail:caixa vazio")
+            print("fail: caixa vazio")
 
 
 
@@ -97,6 +100,7 @@ def main():
 
         elif args[0] == "call":
             market.call(int(args[1]))
+            
             
 
         elif args[0] == "end":
