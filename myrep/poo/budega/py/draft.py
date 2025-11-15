@@ -53,7 +53,7 @@ class Market:
 
 
     def enter(self,cliente:Cliente):
-        self.counters.append(cliente) 
+        self.counters.append(cliente)
         print(self.counters)
 
 
@@ -63,12 +63,13 @@ class Market:
             print("fail: caixa inexistente")
 
         elif not self.counters[posicao]:
+
             print("fail: caixa vazio")
 
 
 
         else:
-            self.counters.pop(posicao)
+            self.counters[posicao] = None
 
         
 
