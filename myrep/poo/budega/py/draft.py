@@ -35,42 +35,41 @@ class Market:
 
     def arrive(self, cliente:Cliente):
         self.wait.append(cliente)
-        
-
-    
-
-    def call(self, posicao: int):
-        if self.counters[posicao] is not None:
-            print("fail: caixa ocupado")
-        
-        elif not self.wait:
-            print("fail:sem clientes") 
-        else:
-            self.counters[posicao] = self.wait.pop(0)
-            
-
-        
 
 
     def enter(self, cliente: Cliente):
         self.arrive(cliente)
         
 
+    
+
+    def call(self, posicao: int):
+        if posicao < 0 or posicao >= len(self.counters):
+            return  
+
+        if self.counters[posicao] is not None:
+            print("fail: caixa ocupado")
+
+        elif not self.wait:
+            print("fail: sem clientes")
+
+        else:
+            self.counters[posicao] = self.wait.pop(0)
+
+
+        
+
 
 
     def finish(self, posicao: int):
-        if not 0  <= posicao < len(self.counters):
+        if posicao < 0 or posicao >= len(self.counters):
             print("fail: caixa inexistente")
 
-        elif not self.counters[posicao]:
-
+        elif self.counters[posicao] is None:
             print("fail: caixa vazio")
-
-
 
         else:
             self.counters[posicao] = None
-
         
 
 
@@ -103,8 +102,11 @@ def main():
             market.call(int(args[1]))
 
 
-       
-            
+
+        elif args[0] == "finish":
+            market.finish(int(args[1]))
+
+
 
         elif args[0] == "end":
             break
