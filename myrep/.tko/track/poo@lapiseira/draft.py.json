@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-17_01-16-30",
+            "content": "@@ -43,15 +43,15 @@\n re :\n- \n float)\n+:\n %0A   \n@@ -110,41 +110,6 @@\n fite\n- %7C None = None%0A        self.tambor \n %0A%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2025-11-17_01-19-38",
+            "content": "@@ -3,17 +3,14 @@\n ass \n-Lapiseira\n+Pencil\n :%0A  \n@@ -46,17 +46,16 @@\n : float)\n-:\n %0A       \n@@ -103,308 +103,48 @@\n o = \n- None%0A        self.tambor:list%5BGrafite%5D = %5B%5D%0A%0A%0A%0A%0A%0A%0A%0A%0A%0Aclass Grafite:%0A    def __init__(self, calibre : float, dureza: str, tamanho: int):%0A        self.calibre = calibre%0A        self.dureza = dureza%0A        self.tamanho = tamanho%0A%0A        %0A%0A        %0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0Adef main():%0A    %0A%0A%0A%0A%0A%0A%0A%0A%0A%0Amain()%0A\n+Grafite %7C None = None%0A        self.tambor \n %0A%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-11-17_01-29-39",
+            "content": "class Lapiseira:\n    def __init__(self, calibre : float):\n        self.calibre =  calibre\n        self.bico =  None\n        self.tambor:list[Grafite] = []\n\n\n\n\n\n\n\n\n\nclass Grafite:\n    def __init__(self, calibre : float, dureza: str, tamanho: int):\n        self.calibre = calibre\n        self.dureza = dureza\n        self.tamanho = tamanho\n\n        \n\n        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef main():\n    \n\n\n\n\n\n\n\n\n\nmain()\n\n\n",
+            "lines": "58"
+        }
+    ]
+}

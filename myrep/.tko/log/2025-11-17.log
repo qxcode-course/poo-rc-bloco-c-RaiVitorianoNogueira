@@ -9,3 +9,15 @@
 2025-11-17 00:55:51, SELF, v:1, k:poo@budega, rate:100, human:os_monitores_me_ajudaram_na_implementacao_de_alguns_metodos, alone:9, study:360
 2025-11-17 00:56:14, MOVE, v:1, k:poo@lapiseira, mode:DOWN
 2025-11-17 00:56:18, MOVE, v:1, k:poo@lapiseira, mode:PICK
+2025-11-17 01:00:44, MOVE, v:1, k:poo@lapiseira, mode:BACK
+2025-11-17 01:01:03, MOVE, v:1, k:poo@lapiseira, mode:PICK
+2025-11-17 01:16:30, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:0, size:5
+2025-11-17 01:19:38, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:0, size:6
+2025-11-17 01:23:02, MOVE, v:1, k:poo@lapiseira, mode:BACK
+2025-11-17 01:23:05, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-17 01:23:19, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-17 01:23:21, MOVE, v:1, k:poo@lapiseira, mode:PICK
+2025-11-17 01:29:39, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:0, size:58
+2025-11-17 01:29:41, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:0
+2025-11-17 01:29:41, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:0
+2025-11-17 01:29:42, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:0
