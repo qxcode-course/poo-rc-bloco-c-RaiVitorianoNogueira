@@ -5,11 +5,18 @@ class Lapiseira:
         self.tambor:list[Grafite] = []
 
 
+
+        def __str__(self):
+            
+
+
     def insert(self, grafite: Grafite):
         if not self.calibre:
             print("fail: calibre incompatível")
             return 
         self.tambor.append(grafite)
+
+
 
 
 

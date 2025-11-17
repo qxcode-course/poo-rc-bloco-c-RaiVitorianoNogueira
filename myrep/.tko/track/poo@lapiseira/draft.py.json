@@ -12,8 +12,13 @@
         },
         {
             "label": "2025-11-17_01-29-39",
-            "content": "class Lapiseira:\n    def __init__(self, calibre : float):\n        self.calibre =  calibre\n        self.bico =  None\n        self.tambor:list[Grafite] = []\n\n\n\n\n\n\n\n\n\nclass Grafite:\n    def __init__(self, calibre : float, dureza: str, tamanho: int):\n        self.calibre = calibre\n        self.dureza = dureza\n        self.tamanho = tamanho\n\n        \n\n        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef main():\n    \n\n\n\n\n\n\n\n\n\nmain()\n\n\n",
+            "content": "@@ -155,229 +155,8 @@\n %0A%0A%0A%0A\n-        def __str__(self):%0A            %0A%0A%0A    def insert(self, grafite: Grafite):%0A        if not self.calibre:%0A            print(%22fail: calibre incompat%C3%ADvel%22)%0A            return %0A        self.tambor.append(grafite)%0A%0A%0A%0A%0A%0A%0A\n %0A%0A%0A%0A\n@@ -332,16 +332,24 @@\n amanho%0A%0A\n+        \n %0A%0A      \n",
             "lines": "58"
+        },
+        {
+            "label": "2025-11-17_01-41-39",
+            "content": "class Lapiseira:\n    def __init__(self, calibre : float):\n        self.calibre =  calibre\n        self.bico =  None\n        self.tambor:list[Grafite] = []\n\n\n\n        def __str__(self):\n            \n\n\n    def insert(self, grafite: Grafite):\n        if not self.calibre:\n            print(\"fail: calibre incompat\u00edvel\")\n            return \n        self.tambor.append(grafite)\n\n\n\n\n\n\n\n\n\n\n\n\nclass Grafite:\n    def __init__(self, calibre : float, dureza: str, tamanho: int):\n        self.calibre = calibre\n        self.dureza = dureza\n        self.tamanho = tamanho\n\n\n\n        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef main():\n    \n\n\n\n\n\n\n\n\n\nmain()\n\n\n",
+            "lines": "73"
         }
     ]
 }
