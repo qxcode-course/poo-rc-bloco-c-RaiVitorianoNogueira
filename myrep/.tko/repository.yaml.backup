@@ -12,14 +12,15 @@ sources:
   type: clone
   branch: master
   cache_path: /workspaces/poo-rc-bloco-c-RaiVitorianoNogueira/myrep/.tko/cache/poo/Readme.md
-  cache_timestamp: '2025-11-16 01:47:19'
+  cache_timestamp: '2025-11-17 00:21:55'
   filters:
   - listas
 expanded:
 - poo@campanha-principal
 - poo@bloco_c-listas
 tasks:
-  poo@budega: '{rate:10}'
+  poo@budega: '{rate:100, human:os_monitores_me_ajudaram_na_implementacao_de_alguns_metodos,
+    alone:9, study:360}'
 flags:
   quests: 0
   tracks: 0

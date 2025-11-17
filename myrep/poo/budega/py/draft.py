@@ -96,6 +96,11 @@ def main():
 
         elif args[0] == "enter":
             market.enter(Cliente(args[1]))
+
+        
+        
+        elif args[0] == "arrive":
+            market.arrive(Cliente(args[1]))
             
 
         elif args[0] == "call":

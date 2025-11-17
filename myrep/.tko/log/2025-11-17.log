@@ -1,0 +1,11 @@
+2025-11-17 00:22:10, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-17 00:35:21, EXEC, v:1, k:poo@budega, mode:FULL, rate:10
+2025-11-17 00:51:29, EXEC, v:1, k:poo@budega, mode:FULL, rate:100, size:122
+2025-11-17 00:52:04, EXEC, v:1, k:poo@budega, mode:FULL, rate:10, size:121
+2025-11-17 00:52:13, EXEC, v:1, k:poo@budega, mode:FULL, rate:100, size:122
+2025-11-17 00:52:32, EXEC, v:1, k:poo@budega, mode:FULL, rate:100
+2025-11-17 00:52:35, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-17 00:55:40, SELF, v:1, k:poo@budega, rate:100, human:os_monitores_me_ajudaram_na_implementacao_de_alguns_metodos, alone:9, study:360
+2025-11-17 00:55:51, SELF, v:1, k:poo@budega, rate:100, human:os_monitores_me_ajudaram_na_implementacao_de_alguns_metodos, alone:9, study:360
+2025-11-17 00:56:14, MOVE, v:1, k:poo@lapiseira, mode:DOWN
+2025-11-17 00:56:18, MOVE, v:1, k:poo@lapiseira, mode:PICK
