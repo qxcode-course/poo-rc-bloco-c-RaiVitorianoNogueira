@@ -58,6 +58,19 @@ class Grafite:
 
 
 def main():
+    lapiseira = Lapiseira(0)
+
+    While True:
+        line = input()
+    
+
+        args = line.split()
+        print("$" + line)
+    
+        if args[0] == "init":
+            
+    
+    
     
 
 
